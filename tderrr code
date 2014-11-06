@@ -1,0 +1,33 @@
+#import "GGView.h"
+#Import "GGDraggableView.h"
+
+@interface GGView ()
+@property (nomatomic, strong) GGDraggableView *DraggableView;
+@end
+
+@implementation GGView
+
+-(id)init
+{
+  Self = [super init];
+  if (!self) return nil;
+  
+  self.backgroundColor = [UIColor whiteColor];
+  [self loadDraggableCustomView];
+  
+  return self;
+  }
+  
+- (void) loadDraggableCustomView
+{
+  Self.draggableView = [[GGDraggableview alloc] init];
+  [self Addsubview:self.draggableView] ;
+  }
+  
+  - (void)layout Subviews {
+    [super layoutsubviews];
+    Self.draggableview.frama = CGRectMake(60, 60, 200, 260);
+    }
+    
+    @end
+    
